@@ -1,0 +1,8 @@
+607 (N/A - no previous sum)
+618 (increased)
+618 (no change)
+617 (decreased)
+647 (increased)
+716 (increased)
+769 (increased)
+792 (increased)
