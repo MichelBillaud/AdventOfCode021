@@ -14,12 +14,12 @@ Le problème était facile, c'était une occasion de me remettre à
 Fortran 77.
 
 
-## Day 2 - Dive
+## Day 2 - Dive (Bash)
 
 Pas trop de calcul, des données dans un format facile à lire, et qu'on
 peut traiter au vol, avec un peu de *shell* (`bash`) ça le fait très bien.
 
-## Day 3 - Binary Diagnostic
+## Day 3 - Binary Diagnostic (Java)
 
 Comme il faut stocker les données lues pour faire plusieurs passes
 dessus, je choisis un langage plus civilisé où les conteneurs sont
@@ -28,7 +28,7 @@ faciles à utiliser.  Pourquoi pas Java.
 Pendant qu'on y est, je passe par des `streams` pour faire les traitements
 de base, plutot que des boucles.
 
-## Day 4 - Bingo
+## Day 4 - Bingo (Java)
 
 Pour la même raison (il faut traiter des *listes* de "Boards"), choix
 de Java.
@@ -86,9 +86,9 @@ public record Position(int row, int col) {
 }
 ~~~
 
-## Day 5 - Vents
+## Day 5 - Vents (Java)
 
-Un usage plus prononcé des streams pour le calcul :
+Un usage plus prononcé des *streams* pour le calcul :
 
 ~~~java
 long count = lines.stream()
@@ -132,13 +132,16 @@ Après coup, je me suis décidé à simplifier la lecture (que je faisais
 j'ai toujours traîné des pieds pour les utiliser. Il n'est jamais trop tard).
 
 
-## Day 6 - Lanternfish
+## Day 6 - Lanternfish (Java)
 
-L'analyse de la ligne de données (une grande chaîne, avec des champs
-séparés par des virgules), aurait compliqué un programmation en Fortran.
-Ca aurait été faisable en C, je n'y ai pas pensé sur le moment.
+**Langage.** L'analyse de la ligne de données (une grande chaîne, avec des champs
+séparés par des virgules), aurait compliqué un programmation en
+Fortran.  Va pour Java. Ca aurait été faisable en C, je n'y ai pas
+pensé sur le moment.  Il va falloir que je pense à changer de langage,
+la prochaine fois.
 
-Ai eu la chance de voir l'astuce (tableau de comptage par état) dès le début.
+**Algorithme.** Ai eu la chance de voir l'astuce (tableau de comptage
+par état) dès le début.
 
 Comme tout le monde, la différence entre la partie 1 et la partie 2,
 c'était le débordement des entiers, réglé par un passage de `int` à `long`.
