@@ -2,6 +2,7 @@
 
 Mes solutions pour les problèmes de l'[Advent Of Code 2021](https://adventofcode.com/).
 
+Si vous participez, ne lisez pas celle du jour
 
 ## Day 1 - Sonar Sweep (Fortran 77)
 
@@ -125,12 +126,13 @@ public record Line(Position start, Position end) {
 J'aurais pu en faire autant pour la lecture.
 
 Après coup, je me suis décidé à simplifier la lecture (que je faisais
-à coup de `Scanner.nextLine` + `String.split`) avec des *regex*.
+à coup de `Scanner.nextLine` + `String.split`) avec des *regex* (bizarrement, 
+j'ai toujours traîné des pieds pour les utiliser. Il n'est jamais trop tard).
 
 
 ## Day 6 - Lanternfish
 
-L'analyse de la ligne de données (une grande chaine, avec des champs
+L'analyse de la ligne de données (une grande chaîne, avec des champs
 séparés par des virgules), aurait compliqué un programmation en Fortran.
 Ca aurait été faisable en C, je n'y ai pas pensé sur le moment.
 
