@@ -103,7 +103,7 @@ long count = lines.stream()
 	.count();
 ~~~
 
-et aussi la génération des points d'une ligne
+et aussi l'énumeration des points d'une ligne
 
 ~~~java
 public record Line(Position start, Position end) {
@@ -135,7 +135,7 @@ j'ai toujours traîné des pieds pour les utiliser. Il n'est jamais trop tard).
 ## Day 6 - Lanternfish (Java)
 
 **Langage.** L'analyse de la ligne de données (une grande chaîne, avec des champs
-séparés par des virgules), aurait compliqué un programmation en
+séparés par des virgules), aurait compliqué la programmation en
 Fortran.  Va pour Java. Ca aurait été faisable en C, je n'y ai pas
 pensé sur le moment.  Il va falloir que je pense à changer de langage,
 la prochaine fois.
