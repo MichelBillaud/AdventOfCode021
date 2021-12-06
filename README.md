@@ -123,16 +123,9 @@ public record Line(Position start, Position end) {
 ~~~
 
 
-J'aurais pu en faire autant pour la lecture, avec le méthode `lines()`
-de `java.nio.file.Files`. Une autre fois, quand les lignes contiendront
-des données homogènes.
-
-~~~java
-var objets =  Files.lines(....)
-    . map( line -> conversion_en_objet(line))
-	. collect( ....);
-~~~
-
+J'aurais pu en faire autant pour la lecture, avec la méthode
+`lines()`, comme le jour 3. J'ai dû avoir peur qu'en partie 2, il y
+ait des données supplémentaires de type différent à lire.
 
 Après coup, je me suis décidé à simplifier la lecture (que je faisais
 à coup de `Scanner.nextLine` + `String.split`) avec des *regex* (bizarrement, 
