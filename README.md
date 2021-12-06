@@ -58,22 +58,22 @@ Ici le builder reçoit des lignes de 5 nombres qu'il entasse dans un tableau.
 et le constructeur de `Board` s'en sert
 
 ~~~java
-   static class Board {
+static class Board {
 
-        final int[][] numbers;
-        final Map<Integer, Position> positions = new HashMap<>();
-        final boolean[][] marks = new boolean[5][5];
+	final int[][] numbers;
+	final Map<Integer, Position> positions = new HashMap<>();
+	final boolean[][] marks = new boolean[5][5];
 
-        Board(BoardBuilder bb) {
-            numbers = bb.numbers;
-            for (int r = 0; r < 5; r++) {
-                for (int c = 0; c < 5; c++) {
-                    positions.put(numbers[r][c], new Position(r, c));
-                }
-            }
-        }
-    ...
+	Board(BoardBuilder bb) {
+		numbers = bb.numbers;
+		for (int r = 0; r < 5; r++) {
+			for (int c = 0; c < 5; c++) {
+				positions.put(numbers[r][c], new Position(r, c));
+			}
+		}
 	}
+...
+}
 ~~~
 
 Ah, et je fais du java moderne, j'ai utilisé un `record` !
@@ -91,16 +91,16 @@ public record Position(int row, int col) {
 Un usage plus prononcé des streams pour le calcul :
 
 ~~~java
-    long count = lines.stream()
-                .filter(Line::isHorizontalOrVertical) // part 1
-                .flatMap(Line::allPositions)
-                .collect(Collectors.groupingBy(
-                        Function.identity(),
-                        Collectors.counting()))
-                .entrySet()
-                .stream()
-                .filter(e -> e.getValue() >= 2)
-                .count();
+long count = lines.stream()
+	.filter(Line::isHorizontalOrVertical) // part 1
+	.flatMap(Line::allPositions)
+	.collect(Collectors.groupingBy(
+		Function.identity(),
+		Collectors.counting()))
+	.entrySet()
+	.stream()
+	.filter(e -> e.getValue() >= 2)
+	.count();
 ~~~
 
 et aussi la génération des points d'une ligne
@@ -116,14 +116,23 @@ public record Line(Position start, Position end) {
         final int d = start.distance(end);
         return IntStream.rangeClosed(0, d).mapToObj(
                 k -> new Position(
-				        start.row() + k * dr,
-                        start.col() + k * dc));
+						start.row() + k * dr,
+						start.col() + k * dc));
     }
 }
 ~~~
 
 
-J'aurais pu en faire autant pour la lecture.
+J'aurais pu en faire autant pour la lecture, avec le méthode `lines()`
+de `java.nio.file.Files`. Une autre fois, quand les lignes contiendront
+des données homogènes.
+
+~~~java
+var objets =  Files.lines(....)
+    . map( line -> conversion_en_objet(line))
+	. collect( ....);
+~~~
+
 
 Après coup, je me suis décidé à simplifier la lecture (que je faisais
 à coup de `Scanner.nextLine` + `String.split`) avec des *regex* (bizarrement, 
@@ -136,15 +145,14 @@ L'analyse de la ligne de données (une grande chaîne, avec des champs
 séparés par des virgules), aurait compliqué un programmation en Fortran.
 Ca aurait été faisable en C, je n'y ai pas pensé sur le moment.
 
-Ai eu la chance de voir l'astuce (tableau des nombres de poissons
-indicé par le compteur qui représente l'âge) dès le début.
+Ai eu la chance de voir l'astuce (tableau de comptage par état) dès le début.
 
 Comme tout le monde, la différence entre la partie 1 et la partie 2,
 c'était le débordement des entiers, réglé par un passage de `int` à `long`.
 
 Évidemment, sauf si on a eu la mauvaise idée de travailler sur une
-liste des poissons, ça explose en taille et temps de calcul (en gros,
-doublement toutes les 6 étapes ? et il y en a 256 !)
+liste des états des poissons, ça explose en taille et temps de calcul
+(en gros, doublement toutes les 6 étapes ? et il y en a 256 !)
 
 ##	à suivre.
 
