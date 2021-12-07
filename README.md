@@ -134,11 +134,11 @@ j'ai toujours traîné des pieds pour les utiliser. Il n'est jamais trop tard).
 
 ## Day 6 - Lanternfish (Java)
 
-**Langage.** L'analyse de la ligne de données (une grande chaîne, avec des champs
-séparés par des virgules), aurait compliqué la programmation en
-Fortran.  Va pour Java. Ca aurait été faisable en C, je n'y ai pas
-pensé sur le moment.  Il va falloir que je pense à changer de langage,
-la prochaine fois.
+**Langage.** L'analyse de la ligne de données (une grande chaîne, avec
+des champs séparés par des virgules), aurait compliqué la
+programmation en Fortran.  Va pour Java. Ca aurait été faisable en C,
+je n'y ai pas pensé sur le moment.  Il va falloir que je pense à
+changer de langage, la prochaine fois.
 
 **Algorithme.** Ai eu la chance de voir l'astuce (tableau de comptage
 par état) dès le début.
@@ -150,6 +150,19 @@ c'était le débordement des entiers, réglé par un passage de `int` à `long`.
 liste des états des poissons, ça explose en taille et temps de calcul
 (en gros, doublement toutes les 6 étapes ? et il y en a 256 !)
 
-##	à suivre.
+
+## Day 7 - Treachery of Whales (Java)
+
+**Langage.** La flemme de changer.
+
+**Algo.** Il me semble que la fonction qui donne la somme des
+distances d'un point p a un ensemble E de points n'a qu'un mimimum
+local, qui est le minimum tout court. Je rêve peut-être. C'est un peu
+loin tout ça.
+
+En tout cas ça a marché.
+
+
+##	À suivre.
 
 ...
