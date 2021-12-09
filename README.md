@@ -162,6 +162,31 @@ loin tout ça.
 
 En tout cas ça a marché.
 
+## Day 8 - Seven Segments (Java)
+
+Programmation en pointillé, en faisant autre chose (vidage de maison).
+
+Le petit portable que j'ai emmené en déplacement m'a fait quelques
+misères avec Netbeans. Au début je me suis obstiné
+un certain temps à ne pas tenir compte de la consigne "une entrée par ligne".
+
+**Algo.** En suivant la recommandation d'une "careful analysis", ai fini
+par trouver que 
+
+- le bit du segment `a` s'obtenait comme différence des masque
+binaires des représentations `7 ` et du `1` (identifiables - partie
+1 - parce que les seuls qui ont respectivement 3 et 2 bits à 1) ;
+- le `d` est différence des bits communs à 2,3 et 5
+(qui ont 5 bits levés) et de ceux de 0, 6 et 9 (6 bits) ;
+- etc.
+
+Travaux quelque peu ralentis suite au déclenchement intempestif d'un
+extincteur en le posant dans la voiture de mon frère qui voulait le
+jeter à la décharge, et la séance d'aspirateur qui s'en est suivie.
+
+Bon à savoir : les décharges ne prennent pas les extincteurs non percutés.
+Là, c'est fait.
+
 
 ##	À suivre.
 
