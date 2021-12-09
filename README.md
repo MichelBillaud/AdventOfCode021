@@ -187,6 +187,10 @@ jeter à la décharge, et la séance d'aspirateur qui s'en est suivie.
 Bon à savoir : les décharges ne prennent pas les extincteurs non percutés.
 Là, c'est fait.
 
+## Day 8 -  Smoke Bains
+
+Parcours de sous-graphes dans une grille. Ça faisait longtemps.
+
 
 ##	À suivre.
 
