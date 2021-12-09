@@ -191,6 +191,31 @@ Là, c'est fait.
 
 Parcours de sous-graphes dans une grille. Ça faisait longtemps.
 
+PS: Apparemment j'ai fait un peu plus général que ce qui était demandé, 
+faute d'avoir tenu compte de la phrase
+
+~~~
+and all other locations will always be part of exactly one basin.
+~~~
+
+ce qui exclut d'existence de "crêtes" qui déversent dans 2 bassines,
+comme les `3` dans
+
+~~~
+132
+231
+~~~
+
+Je n'avais pas interprété
+comme une caractérisque (importante !) des jeux d'essai.
+
+Eussé-je mieux compris, j'aurais tenté un genre set-union-find, pour
+déterminer les composantes connexes qui ne contiennent pas de 9 (histoire
+de ne pas me refaire un flooding).
+
+
+Faut bien lire l'énoncé qu'ils disaient.
+
 
 ##	À suivre.
 
