@@ -75,5 +75,5 @@ function part1(filename) {
         console.log("Part 1 score " + total + " for " + filename);
     });
 }
-part1("small.txt");
-part1("large.txt");
+part1("../small.txt");
+part1("../large.txt");

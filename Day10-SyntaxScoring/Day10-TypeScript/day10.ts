@@ -64,6 +64,6 @@ function part1(filename: string) {
     })
 }
 
-part1("small.txt");
-part1("large.txt");
+part1("../small.txt");
+part1("../large.txt");
 
