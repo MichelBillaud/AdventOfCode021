@@ -187,7 +187,7 @@ jeter à la décharge, et la séance d'aspirateur qui s'en est suivie.
 Bon à savoir : les décharges ne prennent pas les extincteurs non percutés.
 Là, c'est fait.
 
-## Day 8 -  Smoke Bains
+## Day 9 -  Smoke Basins (Java)
 
 Parcours de sous-graphes dans une grille. Ça faisait longtemps.
 
@@ -215,6 +215,21 @@ de ne pas me refaire un flooding).
 
 
 Faut bien lire l'énoncé qu'ils disaient.
+
+
+## Day 10 - SyntaxScoring (C)
+
+**Langage** Un peu de C pour changer.
+
+** Programmation**
+
+- Un peu de distraction. Faire la somme des scores, c'est bien, mais c'est
+pas forcément ce qui est demandé.
+- La flemme de relire la page de manuel de `qsort` pour trier un
+malheureux tableau de `long`, et de même pour réécrire un tri en $O(n
+log n)$. Il n'y a jamais qu'au pire une centaine éléments à ordonner,
+l'insertion au fur et à mesure dans un tableau ordonné, ça fait bien
+l'affaire.
 
 
 ##	À suivre.
