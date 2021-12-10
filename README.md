@@ -103,7 +103,7 @@ long count = lines.stream()
 	.count();
 ~~~
 
-et aussi l'énumeration des points d'une ligne
+et aussi l'énumération des points d'une ligne
 
 ~~~java
 public record Line(Position start, Position end) {
@@ -217,7 +217,7 @@ de ne pas me refaire un flooding).
 Faut bien lire l'énoncé qu'ils disaient.
 
 
-## Day 10 - SyntaxScoring (C)
+## Day 10 - SyntaxScoring (C + un peu de TypeScript)
 
 **Langage** Un peu de C pour changer.
 
@@ -231,6 +231,8 @@ log n)$. Il n'y a jamais qu'au pire une centaine éléments à ordonner,
 l'insertion au fur et à mesure dans un tableau ordonné, ça fait bien
 l'affaire.
 
+**PS** : après coup, j'ai refait la partie 1 en TypeScript, que je ne maîtrise 
+pas du tout (lecture asynchrone du fichier...)
 
 ##	À suivre.
 
