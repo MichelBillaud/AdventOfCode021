@@ -1,9 +1,9 @@
 import * as fs from 'fs';
 import * as rd from 'readline'
 
-import { REPL_MODE_STRICT } from 'repl';
+// import { REPL_MODE_STRICT } from 'repl';
 
-console.log("Hello")
+console.log("This is Day 10")
 
 const opening = "([{<", closing = ")]}>";
 const scores: number[] = [3, 57, 1197, 25137];
@@ -28,15 +28,13 @@ function corruptionScore(s: string): number {
                 // console.log("non vide")
                 if (type != topType) {
                     // console.log(`unexpected ${c} type ${type} score ${scores[type]}`)
-                    return scores[type];
-         
+                    return scores[type];         
                 }
         }
 
     }
     return 0;
 }
-
 
 /*
 function test(s: string) {

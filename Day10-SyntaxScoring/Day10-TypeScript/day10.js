@@ -21,7 +21,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = __importStar(require("fs"));
 var rd = __importStar(require("readline"));
-console.log("Hello");
+// import { REPL_MODE_STRICT } from 'repl';
+console.log("This is Day 10");
 var opening = "([{<", closing = ")]}>";
 var scores = [3, 57, 1197, 25137];
 function corruptionScore(s) {

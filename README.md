@@ -238,7 +238,7 @@ Pour le faire tourner, en ligne de commande :
 
 ~~~
 $ cd Day10-TypeScript
-$ node-js day10.js
+$ nodejs day10.js
 ~~~
 
 ##	À suivre.
