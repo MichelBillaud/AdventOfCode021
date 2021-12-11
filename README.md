@@ -241,6 +241,25 @@ $ cd Day10-TypeScript
 $ nodejs day10.js
 ~~~
 
+## Day 11 - Dumbo Octopus (Java)
+
+**Programmation.** Je voulais en faire une version Cobol pour changer,
+mais je n'ai pas retrouve le package `gnu-cobol` sous Debian.
+
+Du coup, deux versions en Java :
+
+- Dans la version "quick and dirty" qui m'a servi à trouver la
+solution, la partie 2 a été obtenue par copier-coller éhonté de la partie 1.
+
+- Dans la version propre, un peu de refactoring après coup fait
+apparaitre un objet qui décrit l'état de la grille, et des méthodes
+qui agissent dessus. La méthode `step` exécute un pas de
+transformation, et retourne, dans un objet `StepInfo`, des infos
+calculées au passage. Ici il n'y a que le nombre de cellules
+"flashées", mais ça pourrait s'étendre.
+
+
+
 ##	À suivre.
 
 ...
