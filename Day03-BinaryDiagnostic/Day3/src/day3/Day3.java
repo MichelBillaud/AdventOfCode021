@@ -81,9 +81,9 @@ public class Day3 {
     }
 
     public static void main(String[] args) {
-        // part1("large.txt", 12);    
-        part2("small.txt");
-        part2("large.txt");
+        // part1("../large.txt", 12);    
+        part2("../small.txt");
+        part2("../large.txt");
     }
 
     private static void part1(String filename, int nbBits) {
