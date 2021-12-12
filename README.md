@@ -258,6 +258,17 @@ transformation, et retourne, dans un objet `StepInfo`, des infos
 calculées au passage. Ici il n'y a que le nombre de cellules
 "flashées", mais ça pourrait s'étendre.
 
+## Day 12 - Passage Pathing (Java)
+
+**Problème.** Là on rentre dans l'énumération récursive des
+chemins dans un graphe, sous contrainte.
+
+**Programmation.** Gain de temps notable en introduisant dès le départ
+une classe pour représenter l'objet sur lequel on travaille, avec
+
+- ensemble des noms de grandes et petites cavernes,
+- dictionnaire : nom -> liste noms de cavernes accessibles.
+
 
 
 ##	À suivre.
