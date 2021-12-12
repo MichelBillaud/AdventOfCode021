@@ -269,6 +269,25 @@ une classe pour représenter l'objet sur lequel on travaille, avec
 - ensemble des noms de grandes et petites cavernes,
 - dictionnaire : nom -> liste noms de cavernes accessibles.
 
+Idée générale, définir une méthode récursive qui exécute une action
+(un `Runnable` donné en paramètre) quand un chemin est trouvé.
+
+~~~java
+    public int nbDistinctPaths1() {
+        final int[] counter = {0}; // faking a mutable integer 
+        var visitedSmallCaves = new HashSet<String>(List.of("start"));
+        forEachPath1("start", visitedSmallCaves,
+                () -> counter[0]++
+        );
+        return counter[0];
+    }
+~~~
+
+se lit : appliquer l'action "ajouter 1 au compteur" pour chaque chemin
+qui part de `"start"` (et qui arrive à `"end"`) sans repasser 2 fois par
+la même petite caverne (ni repasser par celles qui ont été déjà visitées).
+
+Astuce : tableau contenant un seul `int` pour simuler un `int` mutable.
 
 
 ##	À suivre.
