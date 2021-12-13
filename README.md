@@ -226,8 +226,8 @@ Faut bien lire l'énoncé qu'ils disaient.
 - Un peu de distraction. Faire la somme des scores, c'est bien, mais c'est
 pas forcément ce qui est demandé.
 - La flemme de relire la page de manuel de `qsort` pour trier un
-malheureux tableau de `long`, et de même pour réécrire un tri en $O(n
-log n)$. Il n'y a jamais qu'au pire une centaine éléments à ordonner,
+malheureux tableau de `long`, et de même pour réécrire un tri en *O(n
+log n)*. Il n'y a jamais qu'au pire une centaine éléments à ordonner,
 l'insertion au fur et à mesure dans un tableau ordonné, ça fait bien
 l'affaire.
 
@@ -307,15 +307,15 @@ dans le `main()`, je découpe raisonnablement en fonctions.
 Ça doit donner le même résultat.
 3. Ensuite seulement, je développe la partie 2 en appelant le code commun.
 
-D'où la présence de deux sources 
-[Day13-Transparent-Origami/C/2021-13-part1-only.](Day13-Transparent-Origami/C/2021-13-part1-only.c)
-[Day13-Transparent-Origami/C/2021-13.c](Day13-Transparent-Origami/C/2021-13.c)
+D'où la présence de deux sources
 
-**Algorithme**. Le fichier de données comporte un millier
-de lignes, avec des coordonnées allant jusqu'à $(1310,997)$, j'ai
-préféré évité de travailler sur une matrice de points.
+- [Day13-Transparent-Origami/C/2021-13-part1-only.](Day13-Transparent-Origami/C/2021-13-part1-only.c)
+- [Day13-Transparent-Origami/C/2021-13.c](Day13-Transparent-Origami/C/2021-13.c)
 
-Donc, un tableau de 1000 coordonnées $(x,y)$.
+**Algorithme**. Le fichier de données comporte un millier de lignes,
+avec des coordonnées allant jusqu'à *(1310,997)*, j'ai préféré évité
+de travailler sur une matrice de points. Surtout que c'est possible
+avec un tableau de coordonnées *(x,y)* :
 
 - Pour plier, on modifie les coordonnées de points qui sont
   "rabattus";
