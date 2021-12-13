@@ -5,7 +5,9 @@ CFLAGS += -D_XOPEN_SOURCE=700
 CFLAGS += -g
 
 
-EXECS = 2021-13-part1-only 2021-13
+EXECS =  2021-13-part1-only 
+EXECS += 2021-13
+EXECS += 2021-13-latest
 
 
 all : $(EXECS)
