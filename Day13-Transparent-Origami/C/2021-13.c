@@ -111,21 +111,23 @@ void part1(const char filename[])
         perror("reading data file");
         exit (EXIT_FAILURE);
     }
+    
+    // 1. load points
     struct point points[MAX_NB_POINTS];
     int nb_points;
     load_points(datafile, points, &nb_points);
 
 
-    // 1. read folding instruction
+    // 2. read folding instruction
     char letter;
     int middle;
     read_instruction(datafile, &letter, &middle);
     // printf("folding along %c axis with middle at %d\n", letter, middle);
 
-    // 2. fold
+    // 3. fold
     fold_array(points, nb_points, (letter == 'x'), middle);
 
-    // 3. remove duplicates
+    // 4. remove duplicates
     sort_and_deduplicate(points, &nb_points);
 
     printf("Part 1, %s, after 1 folding, %d points\n",
