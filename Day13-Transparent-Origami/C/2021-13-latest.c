@@ -142,18 +142,17 @@ void part1(const char filename[])
     fclose(datafile);
 }
 
-// double width for better readability
-void display_points(struct point points[], int nb_points)
+void display_points(struct point points[], int nb_points, char *dot, char *space )
 {
     int x = 0, y = 0;
     int next_p = 0;
     while (next_p < nb_points) {
         if (points[next_p].y == y) { // same line
             if (points[next_p].x == x) { // right position
-                printf("[]");
+                printf("%s", dot);
                 next_p ++;
             } else {   // other position on the same line
-                printf("  ");
+                printf("%s", space);
             }
             x++;
         } else {
@@ -188,7 +187,7 @@ void part2(const char filename[])
     printf("Part 2, %s, after foldings, %d points\n",
            filename, nb_points);
     printf("~~~\n");
-    display_points(points, nb_points);
+    display_points(points, nb_points, "[]", "  ");
     fclose(datafile);
     printf("~~~\n");
 }
