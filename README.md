@@ -244,9 +244,9 @@ $ nodejs day10.js
 ## Day 11 - Dumbo Octopus (Java)
 
 **Programmation.** Je voulais en faire une version Cobol pour changer,
-mais je n'ai pas retrouve le package `gnu-cobol` sous Debian.
+mais je n'ai pas retrouvé le package `gnu-cobol` sous Debian.
 
-Du coup, deux versions en Java :
+Du coup (!), deux versions en Java :
 
 - Dans la version "quick and dirty" qui m'a servi à trouver la
 solution, la partie 2 a été obtenue par copier-coller éhonté de la partie 1.
@@ -288,6 +288,45 @@ qui part de `"start"` (et qui arrive à `"end"`) sans repasser 2 fois par
 la même petite caverne (ni repasser par celles qui ont été déjà visitées).
 
 Astuce : tableau contenant un seul `int` pour simuler un `int` mutable.
+
+
+## Day 13 - Transparent Origami (C)
+
+**Nota bene.** Renonçant à essayer de faire le malin avec des
+solutions originales et/ou astucieuses et/ou exotiques (ça me coûte
+!), j'essaie maintenant de mettre en évidence le processus de
+**construction** des programmes, sachant qu'on n'a pas les
+spécifications de la partie 2 quand on réalise la partie 1.
+
+J'explique : 
+
+1. Pour la partie 1, je fais simple, mais propre. Au lieu de tout coller
+dans le `main()`, je découpe raisonnablement en fonctions.
+2. Quand j'ai l'énoncé de la partie 2, je "réusine" le code de la partie
+1 pour faire apparaître du code commun utilisable pour la seconde partie.
+Ça doit donner le même résultat.
+3. Ensuite seulement, je développe la partie 2 en appelant le code commun.
+
+D'où la présence de deux sources 
+[Day13-Transparent-Origami/C/2021-13-part1-only.](Day13-Transparent-Origami/C/2021-13-part1-only.c)
+[Day13-Transparent-Origami/C/2021-13.c](Day13-Transparent-Origami/C/2021-13.c)
+
+**Algorithme**. Le fichier de données comporte un millier
+de lignes, avec des coordonnées allant jusqu'à $(1310,997)$, j'ai
+préféré évité de travailler sur une matrice de points.
+
+Donc, un tableau de 1000 coordonnées $(x,y)$.
+
+- Pour plier, on modifie les coordonnées de points qui sont
+  "rabattus";
+- Ça peut faire apparaître des doublons : on les élimine en triant et
+  en "tassant" pour ôter les répétitions.
+
+Pour l'affichage, on produit les "pixels" un par un, en comparant la
+position du pixel courant et celle du prochain point à traiter (pris
+dans le tableau ordonné). Si c'est la bonne position, on affiche un dièse,
+si c'est un point de la même ligne un espace, sinon on saute à la ligne.
+
 
 
 ##	À suivre.
