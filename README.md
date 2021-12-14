@@ -327,7 +327,22 @@ position du pixel courant et celle du prochain point à traiter (pris
 dans le tableau ordonné). Si c'est la bonne position, on affiche un dièse,
 si c'est un point de la même ligne un espace, sinon on saute à la ligne.
 
+## Day 14 - Extended Polymerization - (C)
 
+Pas besoin de collections, donc C fait l'affaire.
+
+FORTRAN aurait fait le boulot (tableaux multidimensionnels !), et je
+me rend compte après coup que la lecture des données n'aurait pas été
+trop compliquée, parce que le format des règles
+
+~~~
+CH -> B
+HH -> N
+~~~
+
+est fixe.
+
+Ah oui, en COBOL aussi. A voir.
 
 ##	À suivre.
 
