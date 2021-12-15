@@ -342,8 +342,21 @@ HH -> N
 
 est fixe.
 
-Ah oui, en COBOL aussi. A voir.
+Ah oui, en COBOL aussi. À voir.
+
+
+## Day 15 - Chiton - (Java)
+
+Recherche de plus courte distance, 
+encore Dijkstra...
+
+Les sommets à visiter sont dans un `HashSet` c'est pas optimal,
+mais ça demande moins de travail qu'un tas avec mise à jour.
+
+Suffisant pour passer sur le gros exemple.
+
 
 ##	À suivre.
+
 
 ...
