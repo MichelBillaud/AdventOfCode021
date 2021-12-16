@@ -356,6 +356,29 @@ mais ça demande moins de travail qu'un tas avec mise à jour.
 Suffisant pour passer sur le gros exemple.
 
 
+# Day 16 - Packet Decoder (C)
+
+Décodage et traitement de paquets (binaires codés en hexa) imbriqués.
+En C parce que ce n'est pas bien compliqué. Juste embêtant.
+
+Il serait intéressant de revoir ça comme décodage d'un flux de bits, 
+avec comme primitive
+
+~~~C
+	int next_bit(Generator *)
+~~~
+
+peut-être même en C++ pour avoir
+
+~~~
+class Generator {
+public:
+	int next_bit();
+};
+~~~
+
+?
+
 ##	À suivre.
 
 
