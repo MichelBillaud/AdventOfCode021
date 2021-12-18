@@ -379,7 +379,7 @@ public:
 
 ?
 
-# Day 7 - Trick Shot (C)
+# Day 17 - Trick Shot (C)
 
 
 J'étais occupé une grande partie de la journée à dépanner des trucs
@@ -387,6 +387,8 @@ chez des copains et aller assister à une thèse, et j'ai perdu un temps
 conséquent à essayer d'éviter le "brute force" pour la première
 partie. Bref, un jour de retard.
 
+La seconde partie m'a ramenée au bon vieux bourrinage, qu'on pourrait
+d'ailleurs améliorer un peu.
 
 **Recherche des intervalles pour les vitesses initiales**
 
@@ -401,7 +403,7 @@ int s(int n)
 ~~~
 
 et avec un petit effort, en cherchant la racine positive d'une
-équation du secon degré, on a la fonction réciproque
+équation du second degré, on a la fonction réciproque
 
 
 ~~~C
@@ -412,8 +414,8 @@ float sum_root (int d)
 ~~~
 
 dont on peut se servir pour calculer la vitesse horizontale minimale
-pour atteindre le rectangle cible (à partir du x minimum)
-
+pour atteindre le rectangle cible (à partir du x minimum). Je dis ça
+mais j'ai eu la flemme de reporter ça dans les boucles sur `t`.
 
 2. Pour la vitesse horizontale maximum, on peut prendre le x maximum.
 Au delà, on ne risque pas de mettre un pied dans le rectangle.
