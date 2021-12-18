@@ -379,6 +379,71 @@ public:
 
 ?
 
+# Day 7 - Trick Shot (C)
+
+
+J'étais occupé une grande partie de la journée à dépanner des trucs
+chez des copains et aller assister à une thèse, et j'ai perdu un temps
+conséquent à essayer d'éviter le "brute force" pour la première
+partie. Bref, un jour de retard.
+
+
+**Recherche des intervalles pour les vitesses initiales**
+
+1.  On sait que la somme des entiers de 1 à
+n s'obtient par
+
+~~~C
+int s(int n)
+{
+    return (n * (n+1))/2;
+}
+~~~
+
+et avec un petit effort, en cherchant la racine positive d'une
+équation du secon degré, on a la fonction réciproque
+
+
+~~~C
+float sum_root (int d)
+{
+    return (sqrt(1.0 + 8.0 * d) - 1.0 ) /2;
+}
+~~~
+
+dont on peut se servir pour calculer la vitesse horizontale minimale
+pour atteindre le rectangle cible (à partir du x minimum)
+
+
+2. Pour la vitesse horizontale maximum, on peut prendre le x maximum.
+Au delà, on ne risque pas de mettre un pied dans le rectangle.
+
+3. Pour la vitesse verticale minimum, il suffit de viser très bas.
+Avec *vy = y_min* on aura au mieux le coin bas-gauche de la cible,
+avec *vx = 1*.
+
+4. la vitesse verticale maximum, c'est plus amusant. Exemple, pour une
+vitesse verticale de 3, on va monter pour atteindre le sommet *6 =
+3+2+1* :
+
+>  0, 0+3=3, 3+2=5, 5+1=6, 6+0=6
+
+à partir de la, on redescent en passant par les mêmes altitudes
+
+> 6-1=5, 5-2=3, 3-3=0
+
+et donc repasser par 0. Le prochain niveau sera -4.
+Et on ne pourra pas atteindre  les cases d'altitude -3 à -1.
+
+On peut donc choisir, comme vitesse verticale maximum, l'opposé de $y_min$.
+Avec une vitesse plus élevée, impossible d'atteindre la cible.
+
+
+Ce raisonnement marche parce qu'on a des hypothèses tacites vérifiées
+par les exemples, par exemple que la cible est (strictement) dans le
+quart de plan en base à droite. Sinon ça serait une autre histoire.
+
+
 ##	À suivre.
 
 
