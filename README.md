@@ -381,7 +381,6 @@ public:
 
 # Day 17 - Trick Shot (C)
 
-
 J'étais occupé une grande partie de la journée à dépanner des trucs
 chez des copains et aller assister à une thèse, et j'ai perdu un temps
 conséquent à essayer d'éviter le "brute force" pour la première
@@ -430,7 +429,7 @@ vitesse verticale de 3, on va monter pour atteindre le sommet *6 =
 
 >  0, 0+3=3, 3+2=5, 5+1=6, 6+0=6
 
-à partir de la, on redescent en passant par les mêmes altitudes
+à partir de là, on redescend en passant par les mêmes altitudes
 
 > 6-1=5, 5-2=3, 3-3=0
 
@@ -444,6 +443,28 @@ Avec une vitesse plus élevée, impossible d'atteindre la cible.
 Ce raisonnement marche parce qu'on a des hypothèses tacites vérifiées
 par les exemples, par exemple que la cible est (strictement) dans le
 quart de plan en base à droite. Sinon ça serait une autre histoire.
+
+
+# Day 18 - Snailfish (C++)
+
+Toujours un jour de retard.
+
+Me suis *évidemment* embarqué bille en tête dans le parsing pour
+ramener la chaîne à un arbre (en Java). Pas de problème, c'est le genre de
+choses que je sais bien faire, sauf que ça ne mène pas à grand
+chose. *It's a trap*.
+
+Seconde tentative, traiter directement la chaîne de caractères. Passage à
+C++ pour changer. Mais là encore de petits problèmes avec les
+"explode" qui peuvent fabriquent des nombres plus grands que 10.
+Probablement aussi des erreurs en pensant pouvoir combiner
+astucieusement le "number spliting" avec l'"exploding".
+Bref, c'est pas *noethérien*, il faut vraiment appliquer les
+2 étapes dans l'ordre.
+
+Troisième tentative, la bonne, travailler sur un tableau d'*Items*,
+qui sont des symboles (crochets, virgules) ou des valeurs numériques.
+Pris comme ça, c'est beaucoup plus facile.
 
 
 ##	À suivre.
