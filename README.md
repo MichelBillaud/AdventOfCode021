@@ -472,7 +472,7 @@ Jamais fait ce genre de choses. J'y réfléchis. Je crois que j'ai une idée,
 à base de
 
 - projections sur les axes
-- recherche des distances les plus frequentes entre les coordonnées
+- recherche des différences les plus fréquents entre les coordonnées
 d'une map selon un axe et d'un autre selon un autre axe,
 éventuellement retourné.
 
@@ -483,6 +483,26 @@ Encore à creuser. Je fais le 20 d'abord.
 
 Suis tombé comme tout le monde sur le problème de la couleur
 de fond d'une image infinie.
+
+# Day 19 - Beacon-Scanner - (Java)
+
+L'idée de compter les différences entre les points d'une liste A et 
+d'une liste B était viable. Répétée pour les 24 rotations.
+
+La bonne idée de programmation est d'avoir une méthode qui pour une
+rotation R et deux listes A, B de coordonnées retourne éventuellement
+(optionnel) la translation entre A et RB.
+
+En fait, c'est très rapide. Pas besoin de projeter sur les axes. Il y
+aurait sûrement des choses à factoriser si on voulait gagner du temps,
+mais bon.
+
+Je génère les rotations complétion (par produit) des 3 rotations d'un
+1/4 de tour sur les 3 axes. C'est plus drôle que de les rentrer à la
+main.
+
+Pour la seconde partie, il y a une exploration du graphe des "scanners"
+de proche en proche, ce qui permet de déterminer leur position.
 
 
 
