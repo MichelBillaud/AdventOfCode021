@@ -466,6 +466,25 @@ Troisième tentative, la bonne, travailler sur un tableau d'*Items*,
 qui sont des symboles (crochets, virgules) ou des valeurs numériques.
 Pris comme ça, c'est beaucoup plus facile.
 
+# Day 19 - Beacon-Scanner - (DELAYED)
+
+Jamais fait ce genre de choses. J'y réfléchis. Je crois que j'ai une idée,
+à base de
+
+- projections sur les axes
+- recherche des distances les plus frequentes entre les coordonnées
+d'une map selon un axe et d'un autre selon un autre axe,
+éventuellement retourné.
+
+Encore à creuser. Je fais le 20 d'abord.
+
+
+# Day 20 - Trench Map - (C++)
+
+Suis tombé comme tout le monde sur le problème de la couleur
+de fond d'une image infinie.
+
+
 
 ##	À suivre.
 
