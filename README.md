@@ -504,6 +504,15 @@ main.
 Pour la seconde partie, il y a une exploration du graphe des "scanners"
 de proche en proche, ce qui permet de déterminer leur position.
 
+# Day 20 - Dirac Dice (C++)
+
+Gros calculs répétitifs avec récursion qui explose : traité avec
+mémoization.
+
+L'occasion de revoir comment on définit le hachage des classes
+en C++.
+
+Très efficace : seulement 6 ms.
 
 
 ##	À suivre.
