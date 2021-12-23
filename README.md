@@ -514,8 +514,50 @@ en C++.
 
 Très efficace : seulement 6 ms.
 
+# Day 22 - Reactor Reboot (Java)
 
-##	À suivre.
 
 
-...
+Après une brève tentative de faire des trucs en TypeScript pour apprendre,
+je suis revenu à Java.
+
+Grosses pertes de temps avec des fautes de frappe, sans doute inévitables
+quand on trimballe un `record` avec 6 champs `x1, y1, z1, x2, y2, z2`.
+
+L'erreur la plus grossière, la dernière corrigée : 
+
+~~~java
+long volume() {
+	return (x2 - x1 + 1L) * (y2 - y1 + 1L) + (z2 - z1 + 1L);
+}
+~~~
+
+Sinon, idée correcte dès le début :
+
+- on maintient l'ensemble des points allumés comme une union disjoint de cuboïde
+- on calcule la différence entre 2 cuboides sous forme d'une union disjointe
+de cuboïdes.
+- à chaque pas, on calcule
+  l'union des différences entre les cuboides allumés et le nouveau cuboïde. Ca revient
+  à effacer les bouts qui intersectent le nouveau
+- si il faut faire un "on", on y ajoute le nouveau (qui est disjoint
+  des autres)
+
+~~~java
+var present = new ArrayList<Cuboid>();
+	for (var step : steps) {
+		var union = new ArrayList<Cuboid>();
+		for (var c : present) {
+		final List<Cuboid> differences = c.less(step.cuboid);
+			union.addAll(differences);
+        }
+		present = union;
+		if (step.turn_on) {
+			present.add(step.cuboid);
+		}
+}
+~~~
+
+#	À suivre.
+
+Là ça va être dur avec les contraintes familiales.
